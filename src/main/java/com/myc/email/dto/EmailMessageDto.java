@@ -1,7 +1,5 @@
 package com.myc.email.dto;
 
-import java.time.LocalDateTime;
-
 import lombok.Getter;
 import lombok.Setter;
 

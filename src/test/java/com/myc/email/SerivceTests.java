@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.myc.email.domain.EmailMessage;
 import com.myc.email.service.EmailMessageService;
 
 @SpringBootTest

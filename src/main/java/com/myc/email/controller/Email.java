@@ -1,7 +1,6 @@
 package com.myc.email.controller;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;

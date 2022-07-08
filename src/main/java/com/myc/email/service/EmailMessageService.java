@@ -8,7 +8,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.myc.email.controller.Email;
 import com.myc.email.domain.EmailMessage;
 import com.myc.email.domain.EmailMessageRepository;
 import com.myc.email.dto.EmailMessageDto;
