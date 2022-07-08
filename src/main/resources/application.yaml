@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.222.51:3306/email?characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: root0707!
+      pool-name: EmailHikariPool
+      connection-test-query: SELECT NOW() FROM dual
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto: create-drop
+  
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true 
+
+  devtools:
+    livereload:
+      enabled: true
+
+  logging:
+    level:
+      org:
+        hibernate:
+          SQL: DEBUG
+          type:
+            descriptor:
+              sql:
+                BasicBinder: TRACE
