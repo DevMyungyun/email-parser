@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/common")
 public class Common {
     
-    @GetMapping("/healthCheck")
+    @GetMapping("/health-check")
     @ResponseBody
-    public ResponseEntity<HashMap> healthCheck() {
+    public ResponseEntity<HashMap<String, String>> healthCheck() {
         HashMap<String, String> res=new HashMap<>();
         res.put("Message", "Health Check Ok!");
         return ResponseEntity.ok().body(res);

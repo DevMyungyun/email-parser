@@ -23,13 +23,10 @@ public class ParseMessage {
         for(int i=0; i<column.length; i++) {
             for(int j=0; j<content.length; j++) {
                 String subStringKey=content[j].substring(0, column[i].length());
-                // System.out.println("### "+subStringKey);
                 if (subStringKey.equals(column[i])) {
-                    System.out.println(">>>>>>>>>>>  "+i);
                     String[] tmp=content[j].split(":");
                     String key=column[i];
                     String value=tmp[1].trim();
-                    System.out.printf("key: %s // val: %s \n", key, value);
                     map.put(key, value);
                     break;
                 }

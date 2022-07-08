@@ -10,7 +10,10 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /*
@@ -25,6 +28,7 @@ COLUMN
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class EmailMessage {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -35,10 +39,20 @@ public class EmailMessage {
     private String to;
     @Column(nullable = false, name = "emailFrom", length = 320)
     private String from;
-    @CreationTimestamp
-    private LocalDateTime date;
-    @Column(length = 60)
+    @Column(length = 30)
+    private String date;
+    @Column(length = 200)
     private String subject;
     @Column(nullable = false, length = 320)
     private String messageID;
+
+    @Builder
+    public EmailMessage(String fileName, String to, String from, String date, String subject, String messageID) {
+        this.fileName = fileName;
+        this.to = to;
+        this.from = from;
+        this.date = date;
+        this.subject = subject;
+        this.messageID = messageID;
+    }
 }
