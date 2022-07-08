@@ -2,6 +2,7 @@ package com.myc.email.util;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.springframework.stereotype.Component;
@@ -14,27 +15,25 @@ public class ParseMessage {
     
     private final FileRead fileRead;
 
+    private final String[] column={"To", "From", "Date", "Subject", "Message-ID"};
+
     private HashMap<String, String> parseEmailContent(Stream<String> emailContent) {
-        String[] content = emailContent.toString().split("\r?\n|\r");
+        String[] content = emailContent.collect(Collectors.joining("\n")).split("\r?\n|\r");
         HashMap<String, String> map=new HashMap<>();
-        String preKey="";
-        for(int i=0; i<content.length; i++) {
-            if(!content[i].contains(": ")) 
-                map.put(preKey, map.get(preKey)+"\n"+content[i]);
-            if(content[i]=="\n") {
-                String lastContent="";
-                while(i<content.length) {
-                    lastContent+=content[i];
-                    i++;
+        for(int i=0; i<column.length; i++) {
+            for(int j=0; j<content.length; j++) {
+                String subStringKey=content[j].substring(0, column[i].length());
+                // System.out.println("### "+subStringKey);
+                if (subStringKey.equals(column[i])) {
+                    System.out.println(">>>>>>>>>>>  "+i);
+                    String[] tmp=content[j].split(":");
+                    String key=column[i];
+                    String value=tmp[1].trim();
+                    System.out.printf("key: %s // val: %s \n", key, value);
+                    map.put(key, value);
+                    break;
                 }
-                map.put("Content", lastContent);
-                break;
             }
-            String[] tmp=content[i].split(": ");
-            String key=tmp[0];
-            String value=tmp[1];
-            map.put(key, value);
-            preKey=key;
         }
         return map;
     }

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.myc.email.util.FileRead;
+import com.myc.email.util.ParseMessage;
 
 import lombok.RequiredArgsConstructor;
 
@@ -18,6 +19,9 @@ public class UtilTests {
     
     @Autowired
     private FileRead fileRead;
+
+    @Autowired
+    private ParseMessage parseMessage;
 
     @Test
     void printFileList() {
@@ -30,6 +34,15 @@ public class UtilTests {
         map.entrySet().stream().forEach(entry-> {
             System.out.println("[key] : " + entry.getKey() 
             + ", [value] : "+entry.getValue().collect(Collectors.joining("\n")));
+        });
+    }
+
+    @Test
+    void printEmailMap() throws IOException {
+        HashMap<String, HashMap<String, String>> map=parseMessage.getEmailMap();
+        map.entrySet().stream().forEach(entry-> {
+            System.out.println("[key] : " + entry.getKey() 
+            + ", [value] : "+entry.getValue());
         });
     }
 }
