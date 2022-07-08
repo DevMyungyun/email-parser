@@ -12,8 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.myc.email.util.FileRead;
 import com.myc.email.util.ParseMessage;
 
-import lombok.RequiredArgsConstructor;
-
 @SpringBootTest
 public class UtilTests {
     
