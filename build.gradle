@@ -29,5 +29,6 @@ dependencies {
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+	// useJUnitPlatform()
+	test.onlyIf { !project.hasProperty('skipProperty') }
 }

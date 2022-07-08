@@ -7,8 +7,7 @@ RUN chmod +x ./email-parser/gradlew
 FROM mainImage AS buildImage
 ARG JAR_FILE=target/*.jar
 WORKDIR /home/email-parser
-RUN ls -al
-RUN ./gradlew build && java -jar build/libs/myc-spring-boot-email-parser-0.1.0.jar
+RUN ./gradlew build -PskipProperty && java -jar build/libs/myc-spring-boot-email-parser-0.1.0.jar
 
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
