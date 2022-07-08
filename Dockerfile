@@ -1,6 +1,6 @@
 FROM openjdk:11.0.15-jdk-slim-buster AS mainImage
 WORKDIR /home
-RUN apt-get -y install git
+RUN apt-get update -y && apt-get -y install git
 RUN git clone https://github.com/DevMyungyun/email-parser.git
 RUN chmod +x ./email-parser/gradlew
 
