@@ -55,8 +55,27 @@ spring:
 ```
 curl -XPOST http://localhost:8080/email/message-file
 ```
+Response
+```
+[
+    "20110401_xxxxxxxxxx_xxxxxx_xxxx.msg",
+    ...
+]
+```
 
 ### Email Message Date Retrieve API
 ```
 curl -XGET http://localhost:8080/email/info
 ```
+Response
+```
+[
+    {
+        "To": "<xxxxxxxg@cp.monitor1.xxxxx.xxxxx>",
+        "From": "<xxxx@xxxxxx.com>",
+        "Message-ID": "<xxxxxxxxxx@xxx.local>",
+        "Date": "Fri, 1 Apr 2011 10",
+        "Subject": "April 2011 xxx xxx No xxxx xxx xxxx from xxxxx"
+    },
+    ...
+]
