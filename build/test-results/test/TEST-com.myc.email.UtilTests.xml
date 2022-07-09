@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.myc.email.UtilTests" tests="3" skipped="0" failures="3" errors="0" timestamp="2022-07-09T00:34:10" hostname="MYC-MSLAPTOP3" time="11.638">
+<testsuite name="com.myc.email.UtilTests" tests="3" skipped="0" failures="3" errors="0" timestamp="2022-07-09T17:53:57" hostname="MYC-MSLAPTOP3" time="3.079">
   <properties/>
   <testcase name="printFileMap()" classname="com.myc.email.UtilTests" time="0.0">
     <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -147,11 +147,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at app//com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
 	at app//com.zaxxer.hikari.HikariDataSource.&lt;init&gt;(HikariDataSource.java:81)
 	at app//com.myc.email.config.DBConfig.dataSource(DBConfig.java:25)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(&lt;generated&gt;)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(&lt;generated&gt;)
 	at app//org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
 	at app//org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(&lt;generated&gt;)
 	at java.base@11.0.13/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.13/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.13/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -189,15 +189,12 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at app//com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
 	at app//com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
 	... 141 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
 	... 144 more
 </failure>
@@ -348,11 +345,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at app//com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
 	at app//com.zaxxer.hikari.HikariDataSource.&lt;init&gt;(HikariDataSource.java:81)
 	at app//com.myc.email.config.DBConfig.dataSource(DBConfig.java:25)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(&lt;generated&gt;)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(&lt;generated&gt;)
 	at app//org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
 	at app//org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(&lt;generated&gt;)
 	at java.base@11.0.13/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.13/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.13/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -390,20 +387,17 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at app//com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
 	at app//com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
 	... 141 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
 	... 144 more
 </failure>
   </testcase>
-  <testcase name="printEmailMap()" classname="com.myc.email.UtilTests" time="0.0">
+  <testcase name="printEmailMap()" classname="com.myc.email.UtilTests" time="0.001">
     <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
@@ -549,11 +543,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at app//com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:115)
 	at app//com.zaxxer.hikari.HikariDataSource.&lt;init&gt;(HikariDataSource.java:81)
 	at app//com.myc.email.config.DBConfig.dataSource(DBConfig.java:25)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(&lt;generated&gt;)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(&lt;generated&gt;)
 	at app//org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
 	at app//org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(&lt;generated&gt;)
+	at app//com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(&lt;generated&gt;)
 	at java.base@11.0.13/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.13/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.13/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -591,25 +585,22 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at app//com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
 	at app//com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
 	... 141 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
 	... 144 more
 </failure>
   </testcase>
-  <system-out><![CDATA[2022-07-08 19:34:04.956  INFO 15376 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.myc.email.UtilTests], using SpringBootContextLoader
-2022-07-08 19:34:04.957  INFO 15376 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.myc.email.UtilTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-07-08 19:34:04.958  INFO 15376 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.myc.email.UtilTests]: UtilTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-07-08 19:34:04.961  INFO 15376 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.myc.email.EmailApplication for test class com.myc.email.UtilTests
-2022-07-08 19:34:04.964  INFO 15376 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-07-08 19:34:04.964  INFO 15376 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67c6f4d8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a6e9856, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4863c8ac, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@56fda064, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6cdee57, org.springframework.test.context.support.DirtiesContextTestExecutionListener@482f7af0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1edfedf1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@251a90ce, org.springframework.test.context.event.EventPublishingTestExecutionListener@4c4c7d6c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7f0766ef, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e56bc9b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6f3bd37f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@403364e9, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@447521e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2fde9469]
+  <system-out><![CDATA[2022-07-09 12:53:56.102  INFO 13164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.myc.email.UtilTests], using SpringBootContextLoader
+2022-07-09 12:53:56.103  INFO 13164 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.myc.email.UtilTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-07-09 12:53:56.104  INFO 13164 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.myc.email.UtilTests]: UtilTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-07-09 12:53:56.109  INFO 13164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.myc.email.EmailApplication for test class com.myc.email.UtilTests
+2022-07-09 12:53:56.116  INFO 13164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-07-09 12:53:56.117  INFO 13164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78116659, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@712e787e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@53ea380b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@578c3fd9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@245cb8df, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26b3c9a2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@241b971f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@125f16b2, org.springframework.test.context.event.EventPublishingTestExecutionListener@5384ce66, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6b42e36d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13192275, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@79195c22, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@c9b5a99, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@70be89ec, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2aee0704]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -619,12 +610,12 @@ Caused by: java.net.ConnectException: Connection refused: connect
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.1)
 
-2022-07-08 19:34:05.050  INFO 15376 --- [    Test worker] com.myc.email.UtilTests                  : Starting UtilTests using Java 11.0.13 on myc-mslaptop3 with PID 15376 (started by myung in D:\project\java\java11\email)
-2022-07-08 19:34:05.051  INFO 15376 --- [    Test worker] com.myc.email.UtilTests                  : No active profile set, falling back to 1 default profile: "default"
-2022-07-08 19:34:05.403  INFO 15376 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-08 19:34:05.419  INFO 15376 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interfaces.
-2022-07-08 19:34:05.685  INFO 15376 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : EmailHikariPool - Starting...
-2022-07-08 19:34:10.794 ERROR 15376 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : EmailHikariPool - Exception during pool initialization.
+2022-07-09 12:53:56.199  INFO 13164 --- [    Test worker] com.myc.email.UtilTests                  : Starting UtilTests using Java 11.0.13 on myc-mslaptop3 with PID 13164 (started by myung in D:\project\java\java11\email)
+2022-07-09 12:53:56.200  INFO 13164 --- [    Test worker] com.myc.email.UtilTests                  : No active profile set, falling back to 1 default profile: "default"
+2022-07-09 12:53:56.470  INFO 13164 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-09 12:53:56.481  INFO 13164 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+2022-07-09 12:53:56.604  INFO 13164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : EmailHikariPool - Starting...
+2022-07-09 12:53:57.628 ERROR 13164 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : EmailHikariPool - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -643,11 +634,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -789,25 +780,22 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
-2022-07-08 19:34:10.796  WARN 15376 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
+2022-07-09 12:53:57.631  WARN 13164 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2022-07-08 19:34:10.805  INFO 15376 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2022-07-09 12:53:57.644  INFO 13164 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-08 19:34:10.818 ERROR 15376 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2022-07-09 12:53:57.657 ERROR 13164 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
 
@@ -951,11 +939,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -993,19 +981,16 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
-2022-07-08 19:34:10.827 ERROR 15376 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@67c6f4d8] to prepare test instance [com.myc.email.UtilTests@6b25ef1c]
+2022-07-09 12:53:57.672 ERROR 13164 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@78116659] to prepare test instance [com.myc.email.UtilTests@7345f97d]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.21.jar:5.3.21]
@@ -1152,11 +1137,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -1194,15 +1179,12 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
@@ -1215,12 +1197,12 @@ Caused by: java.net.ConnectException: Connection refused: connect
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.1)
 
-2022-07-08 19:34:10.937  INFO 15376 --- [    Test worker] com.myc.email.UtilTests                  : Starting UtilTests using Java 11.0.13 on myc-mslaptop3 with PID 15376 (started by myung in D:\project\java\java11\email)
-2022-07-08 19:34:10.937  INFO 15376 --- [    Test worker] com.myc.email.UtilTests                  : No active profile set, falling back to 1 default profile: "default"
-2022-07-08 19:34:11.458  INFO 15376 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-08 19:34:11.477  INFO 15376 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interfaces.
-2022-07-08 19:34:11.663  INFO 15376 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : EmailHikariPool - Starting...
-2022-07-08 19:34:16.789 ERROR 15376 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : EmailHikariPool - Exception during pool initialization.
+2022-07-09 12:53:57.753  INFO 13164 --- [    Test worker] com.myc.email.UtilTests                  : Starting UtilTests using Java 11.0.13 on myc-mslaptop3 with PID 13164 (started by myung in D:\project\java\java11\email)
+2022-07-09 12:53:57.753  INFO 13164 --- [    Test worker] com.myc.email.UtilTests                  : No active profile set, falling back to 1 default profile: "default"
+2022-07-09 12:53:58.042  INFO 13164 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-09 12:53:58.055  INFO 13164 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
+2022-07-09 12:53:58.182  INFO 13164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : EmailHikariPool - Starting...
+2022-07-09 12:53:59.196 ERROR 13164 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : EmailHikariPool - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -1239,11 +1221,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -1385,25 +1367,22 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
-2022-07-08 19:34:16.792  WARN 15376 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
+2022-07-09 12:53:59.198  WARN 13164 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2022-07-08 19:34:16.796  INFO 15376 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2022-07-09 12:53:59.201  INFO 13164 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-08 19:34:16.823 ERROR 15376 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2022-07-09 12:53:59.209 ERROR 13164 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
 
@@ -1547,11 +1526,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -1589,19 +1568,16 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
-2022-07-08 19:34:16.838 ERROR 15376 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@67c6f4d8] to prepare test instance [com.myc.email.UtilTests@63db743d]
+2022-07-09 12:53:59.219 ERROR 13164 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@78116659] to prepare test instance [com.myc.email.UtilTests@10bf1ec9]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.21.jar:5.3.21]
@@ -1748,11 +1724,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -1790,15 +1766,12 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
@@ -1811,12 +1784,12 @@ Caused by: java.net.ConnectException: Connection refused: connect
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.1)
 
-2022-07-08 19:34:16.903  INFO 15376 --- [    Test worker] com.myc.email.UtilTests                  : Starting UtilTests using Java 11.0.13 on myc-mslaptop3 with PID 15376 (started by myung in D:\project\java\java11\email)
-2022-07-08 19:34:16.903  INFO 15376 --- [    Test worker] com.myc.email.UtilTests                  : No active profile set, falling back to 1 default profile: "default"
-2022-07-08 19:34:17.203  INFO 15376 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-07-08 19:34:17.217  INFO 15376 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
-2022-07-08 19:34:17.347  INFO 15376 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : EmailHikariPool - Starting...
-2022-07-08 19:34:22.436 ERROR 15376 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : EmailHikariPool - Exception during pool initialization.
+2022-07-09 12:53:59.277  INFO 13164 --- [    Test worker] com.myc.email.UtilTests                  : Starting UtilTests using Java 11.0.13 on myc-mslaptop3 with PID 13164 (started by myung in D:\project\java\java11\email)
+2022-07-09 12:53:59.277  INFO 13164 --- [    Test worker] com.myc.email.UtilTests                  : No active profile set, falling back to 1 default profile: "default"
+2022-07-09 12:53:59.569  INFO 13164 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-09 12:53:59.582  INFO 13164 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+2022-07-09 12:53:59.700  INFO 13164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : EmailHikariPool - Starting...
+2022-07-09 12:54:00.720 ERROR 13164 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : EmailHikariPool - Exception during pool initialization.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -1835,11 +1808,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -1981,25 +1954,22 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
-2022-07-08 19:34:22.439  WARN 15376 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
+2022-07-09 12:54:00.722  WARN 13164 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2022-07-08 19:34:22.442  INFO 15376 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
+2022-07-09 12:54:00.727  INFO 13164 --- [    Test worker] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-08 19:34:22.454 ERROR 15376 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+2022-07-09 12:54:00.740 ERROR 13164 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/myc/email/config/DBConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception; nested exception is com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Communications link failure
 
@@ -2143,11 +2113,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -2185,19 +2155,16 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
-2022-07-08 19:34:22.465 ERROR 15376 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@67c6f4d8] to prepare test instance [com.myc.email.UtilTests@6cceb281]
+2022-07-09 12:54:00.751 ERROR 13164 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@78116659] to prepare test instance [com.myc.email.UtilTests@67b5e613]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.21.jar:5.3.21]
@@ -2344,11 +2311,11 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar:na]
 	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81) ~[HikariCP-4.0.3.jar:na]
 	at com.myc.email.config.DBConfig.dataSource(DBConfig.java:25) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.CGLIB$dataSource$0(<generated>) ~[main/:na]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c$$FastClassBySpringCGLIB$$f2099931.invoke(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.CGLIB$dataSource$0(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30$$FastClassBySpringCGLIB$$727f26a1.invoke(<generated>) ~[main/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.21.jar:5.3.21]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.21.jar:5.3.21]
-	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$d50e528c.dataSource(<generated>) ~[main/:na]
+	at com.myc.email.config.DBConfig$$EnhancerBySpringCGLIB$$5059f30.dataSource(<generated>) ~[main/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
@@ -2386,15 +2353,12 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 141 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method) ~[na:na]
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:609) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-java-8.0.29.jar:8.0.29]
+Caused by: java.net.UnknownHostException: mysql8
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1509) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1368) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1302) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:130) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-java-8.0.29.jar:8.0.29]
 	... 144 common frames omitted
 
