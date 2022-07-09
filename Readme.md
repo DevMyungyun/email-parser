@@ -36,6 +36,27 @@ $
 
 ### Email Parser Spring boot Container Deploy
 ```
-docker run -p 8080:8080 springio/myc-spring-boot-email-parser
+docker run -p 8080:8080 springboot/email-parser
 ```
 ### Configuration
+/src/main/resources/application.yaml
+```
+spring:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://{DB_ADDRESS}:{PORT}/email?characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: root0707!
+...
+```
+
+### Email Message File(.msg) Parse API
+```
+curl -XPOST http://localhost:8080/email/message-file
+```
+
+### Email Message Date Retrieve API
+```
+curl -XGET http://localhost:8080/email/info
+```
