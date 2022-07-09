@@ -58,7 +58,7 @@ curl -XPOST http://localhost:8080/email/message-file
 Response
 ```
 [
-    "20110401_americancollegiatemarketing_14461959_multialt.msg",
+    "20110401_xxxxxxxxxx_xxxxxx_xxxx.msg",
     ...
 ]
 ```
@@ -71,11 +71,11 @@ Response
 ```
 [
     {
-        "To": "<americancollegiatemarketing@cp.monitor1.returnpath.net>",
-        "From": "<Amway@MagazineLine.com>",
-        "Message-ID": "<EF9C090C1310457C97AD9E1279F0BF68@acm.local>",
+        "To": "<xxxxxxxg@cp.monitor1.xxxxx.xxxxx>",
+        "From": "<xxxx@xxxxxx.com>",
+        "Message-ID": "<xxxxxxxxxx@xxx.local>",
         "Date": "Fri, 1 Apr 2011 10",
-        "Subject": "April 2011 TPM Amway No Subs Spring Savings from MagazineLine"
+        "Subject": "April 2011 xxx xxx No xxxx xxx xxxx from xxxxx"
     },
     ...
 ]
