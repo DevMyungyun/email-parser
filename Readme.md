@@ -55,8 +55,27 @@ spring:
 ```
 curl -XPOST http://localhost:8080/email/message-file
 ```
+Response
+```
+[
+    "20110401_americancollegiatemarketing_14461959_multialt.msg",
+    ...
+]
+```
 
 ### Email Message Date Retrieve API
 ```
 curl -XGET http://localhost:8080/email/info
 ```
+Response
+```
+[
+    {
+        "To": "<americancollegiatemarketing@cp.monitor1.returnpath.net>",
+        "From": "<Amway@MagazineLine.com>",
+        "Message-ID": "<EF9C090C1310457C97AD9E1279F0BF68@acm.local>",
+        "Date": "Fri, 1 Apr 2011 10",
+        "Subject": "April 2011 TPM Amway No Subs Spring Savings from MagazineLine"
+    },
+    ...
+]
