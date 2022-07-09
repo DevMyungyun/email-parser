@@ -12,10 +12,12 @@ This web server connect to MySQL database.
 Database
 * MySQL 8
 
-### MySQL Docker Container Deploy
+### Docker Network Creat & MySQL Docker Container Deploy
 
 ```
-$ docker run -d --name=mysql8 -p 3306:3306 \
+$ docker network create email
+
+$ docker run -d --name=mysql8 --network email -p 3306:3306 \
 	-e MYSQL_ROOT_PASSWORD=root0707! \
 	-e MYSQL_DATABASE=email  \
 	-v /storage/mysql1/mysql-datadir:/var/lib/mysql mysql:8.0.29
@@ -36,7 +38,7 @@ $ docker build -t springboot/email-parser .
 
 ### Email Parser Spring boot Container Deploy
 ```
-docker run -d --name email-parser -p 8080:8080 springboot/email-parser
+docker run -d --name email-parser --network email -p 8080:8080 springboot/email-parser
 ```
 ### Configuration
 /src/main/resources/application.yaml
