@@ -31,12 +31,12 @@ $ git clone https://github.com/DevMyungyun/email-parser.git
 ```
 $ cd email-parser
 
-$ 
+$ docker build -t springboot/email-parser .
 ```
 
 ### Email Parser Spring boot Container Deploy
 ```
-docker run -p 8080:8080 springboot/email-parser
+docker run -d --name email-parser -p 8080:8080 springboot/email-parser
 ```
 ### Configuration
 /src/main/resources/application.yaml
