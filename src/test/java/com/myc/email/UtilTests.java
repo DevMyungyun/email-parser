@@ -1,6 +1,10 @@
 package com.myc.email;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+
 import java.util.HashMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -22,8 +26,17 @@ public class UtilTests {
     private ParseMessage parseMessage;
 
     @Test
-    void printFileList() {
-        fileRead.printFiles();
+    void printFileName() throws IOException {
+        fileRead.printFileName();
+    }
+
+    @Test
+    void printFileContentList() throws IOException {
+        for (final File file : fileRead.getFileList()) {
+            System.out.println("========================");
+            Stream<String> contents=new BufferedReader(new FileReader(file)).lines();
+            contents.forEach(System.out::println);
+        }
     }
 
     @Test

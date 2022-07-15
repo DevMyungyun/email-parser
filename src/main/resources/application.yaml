@@ -1,8 +1,11 @@
+file:
+  email: C:\\tmp\\sampleEmails\\smallset
+
 spring:
   datasource:
     hikari:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://mysql8:3306/email?characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      jdbc-url: jdbc:mysql://docker-ce.com:3306/email?characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
       username: root
       password: root0707!
       pool-name: EmailHikariPool

@@ -38,7 +38,7 @@ $ docker build -t springboot/email-parser .
 
 ### Email Parser Spring boot Container Deploy
 ```
-docker run -d --name email-parser --network email -p 8080:8080 springboot/email-parser
+docker run -v /tmp:/tmp -d --name email-parser --network email -p 8080:8080 springboot/email-parser
 ```
 ### Configuration
 /src/main/resources/application.yaml
@@ -51,6 +51,11 @@ spring:
       username: root
       password: root0707!
 ...
+```
+
+### Email Smaple Files place blow Path
+```
+/tmp/sampleEmails/smallset
 ```
 
 ### Email Message File(.msg) Parse API

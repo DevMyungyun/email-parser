@@ -50,7 +50,7 @@ public class EmailMessageService {
     }
 
     public List<HashMap<String, String>> getEmailInfo() {
-        List<HashMap<String, String>> res=new ArrayList();
+        List<HashMap<String, String>> res=new ArrayList<>();
         List<EmailMessage> result = emailMessageRepository.findAll();
         for(EmailMessage emailMessage: result) {
             HashMap<String, String> map = new HashMap<>();
