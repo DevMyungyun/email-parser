@@ -1,6 +1,7 @@
 # Email Message Parser
 
-This is API web server for Email Message Paring(.msg).
+This is API web server for paring email message. 
+Currently only support ".msg" filename extention.
 
 ## Getting Started
 
