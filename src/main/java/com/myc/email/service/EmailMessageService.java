@@ -13,6 +13,7 @@ import com.myc.email.domain.EmailMessageRepository;
 import com.myc.email.dto.EmailMessageDto;
 import com.myc.email.mapper.EmailMessageMapper;
 import com.myc.email.util.ParseMessage;
+import com.myc.email.util.ReadEmailFile;
 
 import lombok.RequiredArgsConstructor;
 
@@ -22,11 +23,13 @@ public class EmailMessageService {
     
     private final EmailMessageRepository emailMessageRepository;
     private final EmailMessageMapper emailMessageMapper;
+    private final ReadEmailFile readEmailFile;
     private final ParseMessage parseMessage;
 
     @Transactional
     public List<String> insertEmailMessage() throws IOException{
-        HashMap<String, HashMap<String, String>> map=parseMessage.getEmailMap();
+        readEmailFile.setReadMsgEmailFileStrategy();
+        HashMap<String, HashMap<String, String>> map=parseMessage.getEmailMap(readEmailFile);
         List<String> fileNameArr=new ArrayList<>();
         EmailMessageDto dto=new EmailMessageDto();
         try {

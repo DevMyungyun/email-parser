@@ -13,26 +13,28 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.myc.email.util.FileRead;
 import com.myc.email.util.ParseMessage;
+import com.myc.email.util.ReadEmailFile;
 
 @SpringBootTest
 public class UtilTests {
     
     @Autowired
-    private FileRead fileRead;
+    private ReadEmailFile readEmailFile;
 
     @Autowired
     private ParseMessage parseMessage;
 
     @Test
     void printFileName() throws IOException {
-        fileRead.printFileName();
+        readEmailFile.setReadMsgEmailFileStrategy();
+        readEmailFile.printFileName();
     }
 
     @Test
     void printFileContentList() throws IOException {
-        for (final File file : fileRead.getFileList()) {
+        readEmailFile.setReadMsgEmailFileStrategy();
+        for (final File file : readEmailFile.getFileList()) {
             System.out.println("========================");
             Stream<String> contents=new BufferedReader(new FileReader(file)).lines();
             contents.forEach(System.out::println);
@@ -41,7 +43,8 @@ public class UtilTests {
 
     @Test
     void printFileMap() throws IOException {
-        HashMap<String, Stream<String>> map=fileRead.getFileMap();
+        readEmailFile.setReadMsgEmailFileStrategy();
+        HashMap<String, Stream<String>> map=readEmailFile.getFileMap();
         map.entrySet().stream().forEach(entry-> {
             System.out.println("[key] : " + entry.getKey() 
             + ", [value] : "+entry.getValue().collect(Collectors.joining("\n")));
@@ -50,7 +53,8 @@ public class UtilTests {
 
     @Test
     void printEmailMap() throws IOException {
-        HashMap<String, HashMap<String, String>> map=parseMessage.getEmailMap();
+        readEmailFile.setReadMsgEmailFileStrategy();
+        HashMap<String, HashMap<String, String>> map=parseMessage.getEmailMap(readEmailFile);
         map.entrySet().stream().forEach(entry-> {
             System.out.println("[key] : " + entry.getKey() 
             + ", [value] : "+entry.getValue());
