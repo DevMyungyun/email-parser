@@ -9,6 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.myc.email.service.EmailMessageService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @SpringBootTest
 public class SerivceTests {
     
@@ -19,7 +22,7 @@ public class SerivceTests {
     public void insertTest() throws IOException {
         List<String> result=emailService.insertEmailMessage();
         for(String fileName: result) {
-            System.out.println(fileName);
+            log.info(fileName);
         }
     }
 
@@ -27,11 +30,11 @@ public class SerivceTests {
     public void getEmailInfo() {
         // List<EmailMessage> result=emailService.getEmailInfo();
         // for(EmailMessage emailMessage: result) {
-        //     System.out.println("From: "+emailMessage.getFrom());
-        //     System.out.println("To: "+emailMessage.getTo());
-        //     System.out.println("Date: "+emailMessage.getDate());
-        //     System.out.println("Subject: "+emailMessage.getSubject());
-        //     System.out.println("Message-ID: "+emailMessage.getMessageID());
+        //     log.info("From: "+emailMessage.getFrom());
+        //     log.info("To: "+emailMessage.getTo());
+        //     log.info("Date: "+emailMessage.getDate());
+        //     log.info("Subject: "+emailMessage.getSubject());
+        //     log.info("Message-ID: "+emailMessage.getMessageID());
         // }
     }
 }
